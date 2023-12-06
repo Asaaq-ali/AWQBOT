@@ -15,7 +15,7 @@ from plugins.rtp_function import get_Rank
 
 
 iddof = []
-@app.on_message(
+@Client.on_message(
     command([" "," "])
     & filters.group
     & ~filters.edited
@@ -30,7 +30,7 @@ async def iddlock(client, message):
    else:
       return await message.reply_text("      ")
 
-@app.on_message(
+@Client.on_message(
     command([" "," "])
     & filters.group
     & ~filters.edited
@@ -48,7 +48,7 @@ async def iddopen(client, message):
 
 
 
-@app.on_message(
+@Client.on_message(
     command(["ايدي","id","ا"])
     & filters.group
     & ~filters.edited
@@ -73,7 +73,7 @@ async def iddd(client, message):
 
 
 iddof = []
-@app.on_message(
+@Client.on_message(
     command(["قفل جمالي","تعطيل جمالي"])
     & filters.group
     & ~filters.edited
@@ -88,7 +88,7 @@ async def lllock(client, message):
    else:
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
-@app.on_message(
+@Client.on_message(
     command(["فتح جمالي","تفعيل جمالي"])
     & filters.group
     & ~filters.edited
@@ -106,7 +106,7 @@ async def idljjopen(client, message):
 
 
 
-@app.on_message(
+@Client.on_message(
     command(["جمالي"])
     & filters.group
     & ~filters.edited
