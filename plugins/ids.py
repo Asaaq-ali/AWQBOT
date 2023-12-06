@@ -1,5 +1,6 @@
 import random
 import re
+from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message
 from database import get_db_addcustomid, get_db_mypointgame, get_db_mymessage, get_db_mycontact
@@ -15,8 +16,8 @@ from plugins.rtp_function import get_Rank
 
 
 iddof = []
-@app.on_message(
-    command([" "," "])
+@Client.on_message(
+    filters.command([" "," "])
     & filters.group
     & ~filters.edited
 )
@@ -30,8 +31,8 @@ async def iddlock(client, message):
    else:
       return await message.reply_text("      ")
 
-@app.on_message(
-    command([" "," "])
+@Client.on_message(
+    filters.command([" "," "])
     & filters.group
     & ~filters.edited
 )
@@ -48,8 +49,8 @@ async def iddopen(client, message):
 
 
 
-@app.on_message(
-    command(["ايدي","id","ا"])
+@Client.on_message(
+    filters.command(["ايدي","id","ا"],"")
     & filters.group
     & ~filters.edited
 )
@@ -73,8 +74,8 @@ async def iddd(client, message):
 
 
 iddof = []
-@app.on_message(
-    command(["قفل جمالي","تعطيل جمالي"])
+@Client.on_message(
+    filters.command(["قفل جمالي","تعطيل جمالي"],"")
     & filters.group
     & ~filters.edited
 )
@@ -88,8 +89,8 @@ async def lllock(client, message):
    else:
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
-@app.on_message(
-    command(["فتح جمالي","تفعيل جمالي"])
+@Client.on_message(
+    filters.command(["فتح جمالي","تفعيل جمالي"],"")
     & filters.group
     & ~filters.edited
 )
@@ -106,8 +107,8 @@ async def idljjopen(client, message):
 
 
 
-@app.on_message(
-    command(["جمالي"])
+@Client.on_message(
+    filters.command(["جمالي"],"")
     & filters.group
     & ~filters.edited
 )
